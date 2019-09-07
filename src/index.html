@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Simple Counter</title>
@@ -8,10 +9,21 @@
 </head>
 <body>
     <div class="app">
-        <h1 id="counterValue">0</h1>
-        <button id="increment">+1</button>
+        <h1 id="counterValue"></h1>
+        <button class="change-counter" data-action="INCREMENT" data-value="5">+5</button>
+        <button class="change-counter" data-action="INCREMENT" data-value="1">+1</button>
+        <button class="change-counter" data-action="DECREMENT" data-value="1">-1</button>
+        <button class="change-counter" data-action="DECREMENT" data-value="5">-5</button>
+        <select class="change-color" data-action="COLOR-CHANGE">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+        </select>
+        <div>
+        <br>Enter Counter Value:<br><input class="counter-value" data-action="RESET-VALUE">
+        </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
     <script src="reducer.js"></script>
     <script src="render.js"></script>
